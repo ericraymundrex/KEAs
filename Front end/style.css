@@ -256,41 +256,28 @@ margin-right: 135px;
 
 /************************near by events ****************************/
 
-.nearimg1{width: 20%;
+.nearbyevents
+{
+    margin-bottom: 175px;
+    margin-top: 143px;
+}
+.nearimg1{
+    width: 20%;
     margin-left: -13px;
     float: left;
-    margin-top: -88px;
+    margin-top: -233px;
 }
 
-.headingimg{
-justify-content: center;
-    text-align: center;
-    margin-top: 33px;
-    align-items: center;
-    margin-left: 75px;
+.nearimg2
+{
+    float: right;
+    margin-top: -11pc;
+    margin-right: -10px;
 }
+
+.headingimg{margin-bottom: 18px;justify-content: center;text-align: center;margin-top: 33px;align-items: center;margin-left: 88px;}
 
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
  
  
@@ -310,3 +297,82 @@ justify-content: center;
     width: 32%;
   }
   
+
+
+
+
+
+
+/**************************8volunteer8**********************************/
+
+
+.bgBlueImg2{
+    color: white;
+     
+    background:linear-gradient(0deg,  rgba(0, 0, 0, 0.6),  rgba(0, 0, 0, 0.6)), url(Assets/img/volunteers-with-medical-masks-gloves-preparing-boxes-donation\ 1.png);
+     
+    background-repeat: no-repeat;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.heading-volunter
+{
+    justify-content: center;
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: 700;
+    margin-bottom: 50px;
+    padding-top: 56px;
+}
+
+.heading-volunter2
+{
+    justify-content: center;
+    text-align: center;
+    font-size: 26px;
+}
+
+.deptBtn {
+    border: 5px solid white;
+    margin: auto;
+    width: 16%;
+    font-size: 28px;
+    /* padding: 22px; */
+    padding-top: 16px;
+    padding-left: 35px;
+    height: 79px;
+    font-weight: 800;
+    margin-top: 100px;
+    color: white;
+  }
+ 
+ .gandhi{ text-align: right;
+    font-size: 19px;
+    margin-right: 224px;
+}
+
+/****************OUR-HIGHLIGHT***********************/
+.image-high{
+    margin-top: 51px;
+    margin-left: 24px;
+    /* float: left; */}
+
+.high-heading{
+    margin-left: 228px;
+    margin-top: 82px;
+}
+
+.card-title1 {
+    margin-bottom: .5rem;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    background: #CC0063;
+    border-radius: 14px;
+    margin-top: -32px;
+    padding: 5px;
+    color: white;
+}
