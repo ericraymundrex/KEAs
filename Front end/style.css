@@ -293,10 +293,9 @@ justify-content: center;
 
 
  
-
-  
+ 
 /* ####################### */
-/* ## RESEARCH CAROUSEL ## */
+/* ##  nearby CAROUSEL ## */
 /* ####################### */
 
 #research-slider {
@@ -305,5 +304,9 @@ justify-content: center;
   
   #research-slider .card {
     margin: 15px;
+  }
+  .owl-carousel .owl-item img {
+    display: block;
+    width: 32%;
   }
   
