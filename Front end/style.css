@@ -145,6 +145,21 @@ margin-right: 135px;
 .text-events
 {/* float: right; */font-size: 22px;padding-left: 60px;/* margin-left: 0px; */}
 
+.btn2 {
+    position: ;
+    width: 152px;
+    height: 40px;
+    margin-left: 140px;
+    /* left: 141px; */
+    justify-content: center;
+    margin-top: 0px;
+    background: linear-gradient(
+90deg
+, #CC0063 0%, #FF6633 100%);
+    box-shadow: 8px 8px 15px rgb(204 0 99 / 30%);
+    border-radius: 20px;
+    border-color: linear-gradient(90deg, #CC0063 0%, #FF6633 100%);
+}
 .heading1
 {
     /* float: right; */
