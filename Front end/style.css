@@ -251,4 +251,59 @@ margin-right: 135px;
     background-position: center;
     background-size: cover;
   }
+
+/*****************info end *******************/
+
+/************************near by events ****************************/
+
+.nearimg1{width: 20%;
+    margin-left: -13px;
+    float: left;
+    margin-top: -88px;
+}
+
+.headingimg{
+justify-content: center;
+    text-align: center;
+    margin-top: 33px;
+    align-items: center;
+    margin-left: 75px;
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  
+/* ####################### */
+/* ## RESEARCH CAROUSEL ## */
+/* ####################### */
+
+#research-slider {
+    overflow: hidden;
+  }
+  
+  #research-slider .card {
+    margin: 15px;
+  }
   

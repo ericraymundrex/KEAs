@@ -1,3 +1,39 @@
+
+// OWL CAROUSEL JS
+$(document).ready(function() {
+    $("#research-slider").owlCarousel({
+        items : 3,
+        itemsDesktop:[1199,3],
+        itemsDesktopSmall:[980,2],
+        itemsMobile : [600,1],
+        navigation:true,
+        navigationText:["",""],
+        autoPlay:true
+    });
+});
+
+$(document).ready(function() {
+    $("#news-slider").owlCarousel({
+        items : 3,
+        itemsDesktop:[1199,3],
+        itemsDesktopSmall:[980,2],
+        itemsMobile : [600,1],
+        autoPlay:true
+    });
+});
+
+$(document).ready(function() {
+    $("#date-slider").owlCarousel({
+        items : 5,
+        itemsDesktop:[1199,4],
+        itemsDesktopSmall:[980,3],
+        itemsMobile : [600,1],
+        autoPlay:true
+    });
+});
+
+
+
 // ANIMATE ON SCROLL
 AOS.init({
     delay: 0,
