@@ -151,7 +151,7 @@ margin-right: 135px;
     margin-top: 36px;
     margin-left: 61px;
 }
-
+.mother{/* float: left; */margin-righ: -9px;text-align: right;margin-top: -10px;margin-left: -85px;}
 /************************events card ************************/
 
 .card-header {
@@ -203,4 +203,11 @@ margin-right: 135px;
     margin-bottom: 0;
     text-align: center;
     font-size: 16px;
+}
+
+.group12
+{
+    height: 510px;
+    width: 345px;
+    margin-left: -16px;
 }
