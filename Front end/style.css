@@ -1,7 +1,7 @@
 body
 {
 background-color: #E5E5E5;
-overflow: hidden;
+overflow:auto;
 font-family: 'Montserrat', sans-serif;
 color: black;
 }
@@ -108,11 +108,12 @@ line-height: 29px;
 
 .btn 
 {
-    position: absolute;
+    /* position: absolute; */
     width: 152px;
     height: 40px;
     left: 141px;
-    top: 361px;
+    margin-top: 18px;
+    /* top: 387px; */
     background: linear-gradient(90deg, #CC0063 0%, #FF6633 100%);
     box-shadow: 8px 8px 15px rgba(204, 0, 99, 0.3);
     border-radius: 20px;
