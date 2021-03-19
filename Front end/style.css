@@ -211,3 +211,29 @@ margin-right: 135px;
     width: 345px;
     margin-left: -16px;
 }
+
+
+/**************************info section **************************/
+
+#quick-info h3 {
+    display: inline;
+  }
+  
+  @media only screen and (max-width: 768px){
+    #quick-info h3{
+      font-size: 20px;
+    }
+    #quick-info p{
+      font-size: 13px;
+    }
+  }
+  
+  .bgBlueImg {
+    color: white;
+    background-image: url(Assets/img/Group\ 51.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  
