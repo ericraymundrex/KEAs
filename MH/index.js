@@ -8,7 +8,7 @@ const User = require('./models/user');
 
 const bcrypt = require('bcrypt');
 const session = require("express-session");
-const db = "MH_3";
+const db = "MH_4";
 mongoose.connect('mongodb://localhost:27017/'+db, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => { console.log("MONGO CONNECTION OPEN") }).catch(err => {
     console.log("THERE IS A PROBLEM");
     console.log(err)
@@ -45,6 +45,33 @@ app.get("/",(req,res)=>{
 app.get("/login",(req,res)=>{
     res.render("login");
 });
+app.post("/login",async(req,res)=>{
+    const {Email,Password}=req.body;
+
+    try {
+        const user = await User.findOne({ Email });
+        const validPassword = await bcrypt.compare(Password, user.Password);
+
+        if (validPassword) {
+            req.session.user_id = user._id;
+            res.redirect("/portal/"+user._id);
+        }else{
+            res.render("login",{message:"Wrong Email or password"});
+        }
+    }catch(error){
+                console.log(error);
+                res.render("login",{message:"Wrong Email or password"});
+            } 
+});
+
+app.get("/portal/:id",(req,res)=>{
+    User.find({}).then(allUser=>{
+        const _id=req.params.id;
+        User.findOne({_id}).then(user=>{
+            res.render("admin",{user:user,allUser:allUser});
+        });  
+    })
+});
 
 // REGISTER AS ADMIN, VOLENTEER and DONATOR
 app.get("/register",(req,res)=>{
@@ -56,7 +83,7 @@ app.post("/register",async(req,res)=>{
     const countUser=await User.countDocuments();
 
     //For encryption
-    const {Email,Password,Address,text,age,sex,reason}=req.body;
+    const {Name,Email,Password,Address,text,age,sex,reason}=req.body;
     const hash = await bcrypt.hash(Password, 12);
 
     //Checking the Email is already registered
@@ -67,18 +94,18 @@ app.post("/register",async(req,res)=>{
             if(countUser==0){
                 //If the userCount is 0 make the position as Admin
                 const user=new User({
-                    Email,Password:hash,Address,text,age,sex,reason,Position:"Admin"
+                    Name,Email,Password:hash,Address,text,age,sex,reason,Position:"Admin"
                 });
                 user.save();
             }else{
                 //Else Dont care about admin
                 const user=new User({
-                    Email,Password:hash,Address,text,age,sex,reason,Position:"vol"
+                    Name,Email,Password:hash,Address,text,age,sex,reason,Position:"vol"
                 });
                 user.save();
                 
             }
-            res.redirect("/login");
+            res.redirect("/register");
         }
     });
 });
@@ -88,7 +115,7 @@ app.post("/register1",async(req,res)=>{
     const countUser=await User.countDocuments();
 
     //For encryption
-    const {Email,Password,Address,text,age,sex,reason,Coor}=req.body;
+    const {Name,Email,Password,Address,text,age,sex,reason,Coor}=req.body;
     const hash = await bcrypt.hash(Password, 12);
 
     //Checking the Email is already registered
@@ -99,18 +126,18 @@ app.post("/register1",async(req,res)=>{
             if(countUser==0){
                 //If the userCount is 0 make the position as Admin
                 const user=new User({
-                    Email,Password:hash,Address,text,age,sex,reason,Position:"chari",Coor
+                    Name,Email,Password:hash,Address,text,age,sex,reason,Position:"chari",Coor
                 });
                 user.save();
             }else{
                 //Else Dont care about admin
                 const user=new User({
-                    Email,Password:hash,Address,text,age,sex,reason,Position:"chari",Coor
+                    Name,Email,Password:hash,Address,text,age,sex,reason,Position:"chari",Coor
                 });
                 user.save();
                 
             }
-            res.redirect("/login");
+            res.redirect("/register");
         }
     });
 });
