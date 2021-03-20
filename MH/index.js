@@ -82,6 +82,16 @@ app.get("/portal/:id",requireLogin,(req,res)=>{
         });  
     })
 });
+app.post("/des/:id",(req,res)=>{
+    console.log(req.body);
+    User.findByIdAndUpdate(req.params.id,{"Address":req.body.Add,"text":req.body.text,"reason":req.body.reason},(err,result)=>{
+        if(err){
+            res.send(err);
+        }else{
+            res.redirect("/portal/"+req.params.id);
+        }
+    });
+});
 app.get("/admin1/:id",requireLogin,(req,res)=>{
     User.find({}).then(users=>{
         
