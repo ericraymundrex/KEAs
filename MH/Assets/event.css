@@ -489,12 +489,14 @@ margin-right: 135px;
     background: linear-gradient(90deg, #CC0063 0%, #FF6633 100%);
     box-shadow: 8px 8px 15px rgba(204, 0, 99, 0.3);
     border-radius: 20px;
-    border-color: #CC0063;
+    
     color: #ffffff;
     width: 9%;
     height: 5%;
     font-size: 20px;
     font-family: 'Montserrat';
+    border-style: none;
+    outline: none;
 }
 
 .button2
@@ -509,7 +511,8 @@ margin-right: 135px;
     background: linear-gradient(90deg, #CC0063 0%, #FF6633 100%);
     box-shadow: 8px 8px 15px rgba(204, 0, 99, 0.3);
     border-radius: 20px;
-    border-color: #CC0063;
+    border-style: none;
+    outline: none;
     color: #ffffff;
     width: 9%;
     height: 5%;
@@ -583,7 +586,8 @@ margin-right: 135px;
     background: linear-gradient(90deg, #CC0063 0%, #FF6633 100%);
     box-shadow: 8px 8px 15px rgba(204, 0, 99, 0.3);
     border-radius: 20px;
-    border-color: #CC0063;
+    border-style: none;
+    outline: none;
     color: #ffffff;
     width: 9%;
     height: 5%;
