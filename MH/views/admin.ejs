@@ -133,36 +133,48 @@
     
 
          
-        <form action="/des/<%=user._id%>" method="post">
-        <div class="row">
-            <div class="col-md-3 ">
-                 
-                <div class="form5" >
-                    <label for="usr"></label>
-                    <input type="text" name="Add" class="form-control4" style="margin-top: -20px;" placeholder="Address">
-                  </div>
-            </div>
+            <% if (user.Position=="D")
+            { %>
+                Rejected
+           <% }
+            else if (user.Position=="C")
+            { %>
+                Accepted
+            <%}
+            else 
+            { %>
+                <form action="/des/<%=user._id%>" method="post">
+                    <div class="row">
+                        <div class="col-md-6 ">
+                             
+                            <div class="form4" >
+                                <label for="usr"></label>
+                                <input type="text" name="Add" class="form-control4" style="margin-top: -20px;" placeholder="Address">
+                              </div>
+                        </div>
+                        
+                        <div class="col-md-6 ">
+                            
+                            <div class="form5" >
+                                <label for="usr"></label>
+                                <input type="text" name="text" class="form-control5" style="margin-top: -20px;" placeholder="Contact No.">
+                              </div>
+                        </div>
+                        
+                    </div>
             
-            <div class="col-md-3">
-                
-                <div class="form5" >
-                    <label for="usr"></label>
-                    <input type="text" name="text" class="form-control5" style="margin-top: -20px;" placeholder="Contact No.">
-                  </div>
-            </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <textarea name="reason" class="area"  placeholder="Description....." rows="10" cols="30"></textarea>
+                        </div>
+                    </div>
             
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <textarea name="reason" class="area"  placeholder="Description....." rows="10" cols="30"></textarea>
-            </div>
-        </div>
-
-        <div class="button">
-            <button class="btn0">SUBMIT</button>
-        </div>
-    </form>
+                    <div class="button">
+                        <button class="btn0">SUBMIT</button>
+                    </div>
+                </form>
+            <% } %>
+            
 
      
 
