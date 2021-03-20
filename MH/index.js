@@ -82,7 +82,9 @@ app.get("/portal/:id",requireLogin,(req,res)=>{
         });  
     })
 });
-
+app.get("/event",(req,res)=>{
+    res.render("event");
+});
 // REGISTER AS ADMIN, VOLENTEER and DONATOR
 app.get("/register",(req,res)=>{
     res.render("register");
