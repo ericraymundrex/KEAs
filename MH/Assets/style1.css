@@ -290,6 +290,7 @@ margin-right: 135px;
 
 #research-slider {
     overflow: hidden;
+    display: flex;
   }
   
   #research-slider .card {
@@ -535,6 +536,11 @@ textarea {
         text-align: center!important;
         margin-top: -138px;
     }
+    .group12 {
+        height: 261px;
+        width: 162px;
+        margin-left: -16px;
+    }
 
     .headingimg {
         margin-bottom: 15px;
@@ -558,5 +564,66 @@ textarea {
         margin-top: -5pc;
         margin-right: 9px;
         width: 50%;
-    }    
+    }  
+    
+    .col-8 {
+        flex: 0 0 auto;
+        width: 66.6666666667%;
+        margin: auto;
+        margin-left: 79px;
+    }
+
+
+    .heading-volunter {
+        justify-content: center;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        padding-top: 56px;
+    }
+    .heading-volunter2 {
+        justify-content: center;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .gandhi {
+        text-align: right;
+        font-size: 13px;
+        margin-right: 58px;
+        /* float: right; */
+    }
+    .deptBtn {
+        border: 5px solid white;
+        margin: auto;
+        width: 47%;
+        font-size: 19px;
+        /* padding: 22px; */
+        padding-top: 11px;
+        padding-left: 44px;
+        height: 56px;
+        font-weight: 600;
+        margin-top: 100px;
+        color: white;
+    }
+
+    .image-high {
+        margin-top: 18px;
+        margin-left: 1px;
+        /* float: left; */
+        width: 14%;
+    }
+    .high-heading {
+        margin-left: -44px;
+        width: 68%;
+        margin-top: 82px;
+    }
+  
+    #research-slider {
+        overflow: hidden;
+        display: block;
+        margin: auto;
+        margin-left: -34px;
+    }
 }

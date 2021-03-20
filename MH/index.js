@@ -77,7 +77,7 @@ app.get("/portal/:id",requireLogin,(req,res)=>{
             if(user.Position=="chari"||user.Position=="D"||user.Position=="C"){
             res.render("admin",{user:user,allUser:allUser});}
             if(user.Position=="vol"){
-                res.send("Vol");
+               res.redirect("/");
             }
         });  
     })
