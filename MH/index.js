@@ -36,7 +36,7 @@ const requireLogin = (req, res, next) => {
 //---------HOME paGE-------
 
 app.get("/",(req,res)=>{
-    res.render("home");
+    res.render("home",{lo:req.session});
 });
 
 //-------AUTENTICATION-----
