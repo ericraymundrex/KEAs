@@ -293,6 +293,25 @@ body
   .form-control1:-ms-input-placeholder { color: #FF6633; font-weight: 100; text-align: center; }  /* Internet Explorer 10-11 */
   .form-control1::-ms-input-placeholder { color: #FF6633; font-weight: 100; text-align: center; }  /* Microsoft Edge */
 
+.Email 
+{
+  margin-left: 25%;
+}
+.ehead 
+{
+  color:#CC0063; 
+  
+}
+
+.contact 
+{
+  margin-left: 25% ;
+}
+
+.contactn 
+{
+  color: #CC0063;
+}
 
 .bottomimg 
 {   position: relative;
