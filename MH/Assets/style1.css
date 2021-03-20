@@ -199,6 +199,7 @@ margin-right: 135px;
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 324px;
     min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
