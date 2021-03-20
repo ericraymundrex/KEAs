@@ -426,7 +426,7 @@ textarea {
     background-image: url('img/Rectangle\ 13.png');
     background-repeat: no-repeat;
     background-position: relative;
-    background-size: contain;
+    background-size: cover;
 }
 
 .footer-right
@@ -445,7 +445,17 @@ textarea {
 
 
 @media only screen and (max-width: 500px) {
+    body{
+        overflow: auto;
+    }
 
+    .button-navbar {
+        width: 70%;
+        margin-top: -38px;
+        float: right;
+        height: 50px;
+        width: 85px;
+    }
     .main-text {
         font-family: Montserrat;
         font-style: normal;
@@ -640,5 +650,12 @@ textarea {
     .text-center {
         text-align: center!important;
         margin-top: 7px;
+    }
+
+    .footer-background {
+        background-image: url(img/Rectangle\ 13.png);
+        background-repeat: no-repeat;
+        background-position: relative;
+        background-size: contain;
     }
 }
