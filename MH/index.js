@@ -85,11 +85,31 @@ app.get("/portal/:id",requireLogin,(req,res)=>{
 app.get("/admin1/:id",requireLogin,(req,res)=>{
     User.find({}).then(users=>{
         console.log(users);
-        res.render("admin1",{users:users});
+        res.render("admin1",{users:users,id:req.params.id});
     });
 });
 app.get("/event",(req,res)=>{
     res.render("event");
+});
+app.post("/cp/:d/:_id/:id",(req,res)=>{
+    if(req.params.d=="accept"){
+        User.findByIdAndUpdate(req.params._id,{"Position":"C"},(err,result)=>{
+            if(err){
+                res.send(err);
+            }else{
+                res.redirect("/admin1/"+req.params.id);
+            }
+        });
+    }
+    if(req.params.d=="D"){
+        User.findByIdAndUpdate(req.params._id,{"Position":"D"},(err,result)=>{
+            if(err){
+                res.send(err);
+            }else{
+                res.redirect("/admin1/"+req.params.id);
+            }
+        });
+    }
 });
 // REGISTER AS ADMIN, VOLENTEER and DONATOR
 app.get("/register",(req,res)=>{

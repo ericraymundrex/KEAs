@@ -58,6 +58,7 @@
                 <img class="nameimg" src="../images1/Group 71.png">
             </div>
       <%for(let user of users){%>
+        <%if(user.Position=="chari"){%>
          <div class="imageContainer">
             <div class="cardimg">
                 <img class="rec" src="../images1/Rectangle 41.png">
@@ -65,9 +66,11 @@
             <div class="caption text"><%=user.Name%></div>
             <div class="caption text1"><img class="pin" src="../images1/pin 2.png"><%=user.Address%></div>
             <div class="caption text3"><%=user.text%></div>
-            <div class="caption status"> <button  type="button" class="submit">Accept</button></div>
-            <div class="caption status1"> <button  type="button" class="submit">Reject</button></div>   
             
+            <div class="caption status"><form action="/cp/accept/<%=user._id%>/<%=id%>" method="POST"> <button type="button" class="submit">Accept</button></form></div>
+          
+            <div class="caption status1"><form action="/cp/D/<%=user._id%>/<%=id%>" method="POST"> <button  type="button" class="submit">Reject</button></form></div>   
+            <%}%>
 
            </div>
            <%}%>
