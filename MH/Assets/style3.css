@@ -293,6 +293,25 @@ body
   .form-control1:-ms-input-placeholder { color: #FF6633; font-weight: 100; text-align: center; }  /* Internet Explorer 10-11 */
   .form-control1::-ms-input-placeholder { color: #FF6633; font-weight: 100; text-align: center; }  /* Microsoft Edge */
 
+.Email 
+{
+  margin-left: 25%;
+}
+.ehead 
+{
+  color:#CC0063; 
+  
+}
+
+.contact 
+{
+  margin-left: 25% ;
+}
+
+.contactn 
+{
+  color: #CC0063;
+}
 
 .bottomimg 
 {   position: relative;
@@ -435,10 +454,20 @@ body
     color: #FF6633;
   }
 
-.button 
+.btn0
 {
+  background: linear-gradient(90deg, #CC0063 0%, #FF6633 100%);
+  box-shadow: 8px 8px 15px rgba(204, 0, 99, 0.3);
+  border-radius: 20px;
+  padding: 7px;
     margin-top: 17%;
     margin-left: 50%;
+    width: 10%;
+    height: 4%;
+    border-style: none;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
 }
 
 .btn1 
