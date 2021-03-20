@@ -12,7 +12,8 @@ const User=new mongoose.Schema({
     sex:String,
     reason:String,
     amount:[String],
-    time:[String]
+    time:[String],
+    charity:String
 });
 
 module.exports = mongoose.model('User', User);
