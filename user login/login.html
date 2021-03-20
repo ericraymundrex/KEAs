@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN/SIGNUP</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="./Assets2/style2.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/fontawesome.min.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+     
+    
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <!-- <form id="register_form" action="register" method="post"> -->
+                <form id="register_form" action="/register" method="post">
+                    <h1>Register</h1>
+                    <input name="Name" type="text" placeholder="Name" required>
+                    
+                   
+
+                    <input name="Age" type="text" placeholder="Age" required>
+
+                    <input name="Gender" type="text" placeholder="Gender" required>
+                  
+                    <input name="Email" type="text" placeholder="E-Mail" required>
+                   
+                    <input name="Password" type="password" placeholder="Password" required>
+
+
+                <button>Submit</button>
+                <br>
+                <h3><a href="" target="_blank" style="color: #FF6633;">Register As Charity?</a></h3>
+            </form>
+</div>
+<div class="form-container sign-in-container">
+    <form id="login_form" action="/login" method="post">
+        <h1>Sign in</h1>
+        <input name="Email" type="text" placeholder="Email" required>
+        
+        <input name="Password" type="password" placeholder="Password" required>
+        
+        <button>Submit</button>
+    </form>
+</div>
+<div class="overlay-container">
+    <div class="overlay">
+        <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>To keep connected with us please login with your personal info</p>
+            <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+    
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+    
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+    
+    
+    
+    </script>
+</body>
+</html>
