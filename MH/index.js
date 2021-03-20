@@ -83,7 +83,10 @@ app.get("/portal/:id",requireLogin,(req,res)=>{
     })
 });
 app.get("/admin1/:id",requireLogin,(req,res)=>{
-    res.render("admin1");
+    User.find({}).then(users=>{
+        console.log(users);
+        res.render("admin1",{users:users});
+    });
 });
 app.get("/event",(req,res)=>{
     res.render("event");
