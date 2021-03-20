@@ -118,7 +118,9 @@ margin-right: 135px;
     background: linear-gradient(90deg, #CC0063 0%, #FF6633 100%);
     box-shadow: 8px 8px 15px rgba(204, 0, 99, 0.3);
     border-radius: 20px;
-    border-color: linear-gradient(90deg, #CC0063 0%, #FF6633 100%);
+    
+    border-style: none;
+    outline: none;
 }
 
 .btn:hover 
@@ -160,7 +162,8 @@ margin-right: 135px;
 , #CC0063 0%, #FF6633 100%);
     box-shadow: 8px 8px 15px rgb(204 0 99 / 30%);
     border-radius: 20px;
-    border-color: linear-gradient(90deg, #CC0063 0%, #FF6633 100%);
+   border-style: none;
+   outline: none;
 }
 .heading1
 {
