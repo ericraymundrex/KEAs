@@ -25,7 +25,7 @@ app.use(session({ secret: "I love MozzoHack" }));
 //Middleware for login - AUTENTICATION
 const requireLogin = (req, res, next) => {
     if (!req.session.user_id) {
-        return res.redirect("/login");
+        return res.redirect("/register");
     }
     next();
 }
@@ -42,9 +42,7 @@ app.get("/",(req,res)=>{
 //-------AUTENTICATION-----
 //-------LOG-IN       -----
 
-app.get("/login",(req,res)=>{
-    res.render("login");
-});
+
 app.post("/login",async(req,res)=>{
     const {Email,Password}=req.body;
 
@@ -56,19 +54,31 @@ app.post("/login",async(req,res)=>{
             req.session.user_id = user._id;
             res.redirect("/portal/"+user._id);
         }else{
-            res.render("login",{message:"Wrong Email or password"});
+            res.render("register",{message:"Wrong Email or password"});
         }
     }catch(error){
                 console.log(error);
-                res.render("login",{message:"Wrong Email or password"});
+                res.render("register",{message:"Wrong Email or password"});
             } 
 });
+app.post("/logout", (req, res) => {
+    req.session.user_id = null;
+    req.session.destroy();
+    res.redirect("/register");
+});
+app.get("/portal/:id",requireLogin,(req,res)=>{
 
-app.get("/portal/:id",(req,res)=>{
     User.find({}).then(allUser=>{
         const _id=req.params.id;
         User.findOne({_id}).then(user=>{
-            res.render("admin",{user:user,allUser:allUser});
+            if(user.Position=="Admin"){
+                res.send("Admin");
+            }
+            if(user.Position=="chari"){
+            res.render("admin",{user:user,allUser:allUser});}
+            if(user.Position=="vol"){
+                res.send("Vol");
+            }
         });  
     })
 });
@@ -76,6 +86,9 @@ app.get("/portal/:id",(req,res)=>{
 // REGISTER AS ADMIN, VOLENTEER and DONATOR
 app.get("/register",(req,res)=>{
     res.render("register");
+});
+app.get("/register1",(req,res)=>{
+    res.render("register1");
 });
 app.post("/register",async(req,res)=>{
 
@@ -89,7 +102,7 @@ app.post("/register",async(req,res)=>{
     //Checking the Email is already registered
     User.findOne({ Email: Email }).then(user => {
         if(user){
-            res.redirect("/login");
+            res.redirect("/register");
         }else{
             if(countUser==0){
                 //If the userCount is 0 make the position as Admin
@@ -121,7 +134,7 @@ app.post("/register1",async(req,res)=>{
     //Checking the Email is already registered
     User.findOne({ Email: Email }).then(user => {
         if(user){
-            res.redirect("/login");
+            res.redirect("/register");
         }else{
             if(countUser==0){
                 //If the userCount is 0 make the position as Admin
@@ -142,7 +155,7 @@ app.post("/register1",async(req,res)=>{
     });
 });
 app.get("*",(req,res)=>{
-    res.send("404 page not found");
+    res.redirect("/register");
 });
 // The SSERVER starts in port::3000
 app.listen(3000, () => {
