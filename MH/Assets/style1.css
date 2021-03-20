@@ -426,7 +426,7 @@ textarea {
     background-image: url('img/Rectangle\ 13.png');
     background-repeat: no-repeat;
     background-position: relative;
-    background-size: cover;
+    background-size: contain;
 }
 
 .footer-right
@@ -453,7 +453,7 @@ textarea {
         font-size: 12px;
         line-height: 17px;
         /* margin-right: 26px; */
-        margin-top: 11px;
+        margin-top: -11px;
         margin-bottom: 22rem;
         /* text-align: center; */
         position: inherit;
@@ -615,9 +615,9 @@ textarea {
         width: 14%;
     }
     .high-heading {
-        margin-left: -44px;
-        width: 68%;
-        margin-top: 82px;
+        margin-left: 0px;
+        width: 100%;
+        margin-top: 5px;
     }
   
     #research-slider {
@@ -625,5 +625,20 @@ textarea {
         display: block;
         margin: auto;
         margin-left: -34px;
+    }
+    .vol-img
+    {
+        width: 100%;
+    }
+
+    .footer-right {
+        margin-left: 140px;
+        display: none;
+    }
+
+
+    .text-center {
+        text-align: center!important;
+        margin-top: 7px;
     }
 }
