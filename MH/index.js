@@ -84,7 +84,7 @@ app.get("/portal/:id",requireLogin,(req,res)=>{
 });
 app.get("/admin1/:id",requireLogin,(req,res)=>{
     User.find({}).then(users=>{
-        console.log(users);
+        
         res.render("admin1",{users:users,id:req.params.id});
     });
 });
