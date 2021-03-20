@@ -74,7 +74,7 @@ app.get("/portal/:id",requireLogin,(req,res)=>{
             if(user.Position=="Admin"){
                 res.redirect("/admin1/"+_id);
             }
-            if(user.Position=="chari"){
+            if(user.Position=="chari"||user.Position=="D"||user.Position=="C"){
             res.render("admin",{user:user,allUser:allUser});}
             if(user.Position=="vol"){
                 res.send("Vol");
