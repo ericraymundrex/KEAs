@@ -232,7 +232,7 @@ body
 
 .pin 
 {
-  width: 18%;
+  width: 80%;
 }
 
 .status 
@@ -260,16 +260,7 @@ body
   width: 130%;
 }
 
-.submit1
-{
-  border-radius: 20px;
-  border-color: #CC0063;
-  width: 150%;
-  height: 120%;
-  color: #ffffff;
-  background: linear-gradient(90deg, #CC0063 0%, #FF6633 100%);
-  box-shadow: 8px 8px 15px rgba(204, 0, 99, 0.3);
-}
+
 .submit
 {
   border-radius: 20px;

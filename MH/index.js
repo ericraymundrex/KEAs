@@ -8,7 +8,7 @@ const User = require('./models/user');
 
 const bcrypt = require('bcrypt');
 const session = require("express-session");
-const db = "MH_4";
+const db = "MH_100";
 mongoose.connect('mongodb://localhost:27017/'+db, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => { console.log("MONGO CONNECTION OPEN") }).catch(err => {
     console.log("THERE IS A PROBLEM");
     console.log(err)
