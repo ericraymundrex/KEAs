@@ -72,7 +72,7 @@ app.get("/portal/:id",requireLogin,(req,res)=>{
         const _id=req.params.id;
         User.findOne({_id}).then(user=>{
             if(user.Position=="Admin"){
-                res.send("Admin");
+                res.redirect("/admin1/"+_id);
             }
             if(user.Position=="chari"){
             res.render("admin",{user:user,allUser:allUser});}
@@ -81,6 +81,9 @@ app.get("/portal/:id",requireLogin,(req,res)=>{
             }
         });  
     })
+});
+app.get("/admin1/:id",requireLogin,(req,res)=>{
+    res.render("admin1");
 });
 app.get("/event",(req,res)=>{
     res.render("event");
