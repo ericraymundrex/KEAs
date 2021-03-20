@@ -143,25 +143,7 @@
             <%}
             else 
             { %>
-                <form action="/des/<%=user._id%>" method="post">
-                    <div class="row">
-                        <div class="col-md-6 ">
-                             
-                            <div class="form4" >
-                                <label for="usr"></label>
-                                <input type="text" name="Add" class="form-control4" style="margin-top: -20px;" placeholder="Address">
-                              </div>
-                        </div>
-                        
-                        <div class="col-md-6 ">
-                            
-                            <div class="form5" >
-                                <label for="usr"></label>
-                                <input type="text" name="text" class="form-control5" style="margin-top: -20px;" placeholder="Contact No.">
-                              </div>
-                        </div>
-                        
-                    </div>
+                
             
         </div>
         <form action="/des/<%=user._id%>" method="post">
@@ -174,9 +156,13 @@
                   </div>
                   <div class="form4" >
                     <label for="usr"></label>
-                    <input type="text" name="Coor" class="form-control4" style="margin-top: -20px;" placeholder="Address">
+                    <input type="text" name="Coor" class="form-control4" style="margin-top: -20px;" placeholder="Co-ordinates">
                   </div>
             </div>
+            <div class="form5" >
+                <label for="usr"></label>
+                <input type="text" name="text" class="form-control5" style="margin-top: -20px;" placeholder="Contact No.">
+              </div>
                     <div class="row">
                         <div class="col-md-12">
                             <textarea name="reason" class="area"  placeholder="Description....." rows="10" cols="30"></textarea>
