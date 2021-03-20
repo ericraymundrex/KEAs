@@ -167,7 +167,7 @@ app.post("/register1",async(req,res)=>{
             if(countUser==0){
                 //If the userCount is 0 make the position as Admin
                 const user=new User({
-                    Name,Email,Password:hash,Address,text,age,sex,reason,Position:"chari",Coor
+                    Name,Email,Password:hash,Address,text,age,sex,reason,Position:"Admin",Coor
                 });
                 user.save();
             }else{
